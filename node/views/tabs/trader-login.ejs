@@ -1,14 +1,26 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Log In</title>
+</head>
 <body>
-  <form className="login-page">
-    <h3>TRADER LOG IN</h3>
-    <div className="form-details">
-      <input className="bar" type="email" placeholder="Email" />
-
-      <input type="password" className="bar" placeholder="Password" />
+  <div class="container">
+    <div class="card">
+      <img src="/images/trader-login.jpg" alt="Login Image" class="login-image">
+      <form class="login-form">
+        <h3>Trader Log In</h3>
+        <div class="form-details">
+          <input class="bar" type="email" placeholder="Email" required />
+          <input type="password" class="bar" placeholder="Password" required />
+        </div>
+        <div class="login-btn">
+          <button class="button-28-login">Log In</button>
+        </div>
+      </form>
     </div>
-    <div className="login-btn">
-        <button className="button-28-login"><a href="/feed">Log in</a></button>
-    </div>
-  </form>
+  </div>
 </body>
+</html>
