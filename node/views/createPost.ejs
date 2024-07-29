@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post</title>
+</head>
+<body>
+  <h1>Create a Post</h1>
+  <form action="/node/create" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" name="title" required>
+    <label for="description">Description:</label>
+    <textarea name="description" required></textarea>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" required>
+    <label for="contactInfo">Contact Info:</label>
+    <input type="text" name="contactInfo" required>
+    <button type="submit">Create Post</button>
+  </form>
+  <a href="/node/feed">Back to Feed</a>
+</body>
+</html>

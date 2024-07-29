@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Interests</title>
+</head>
+<body>
+  <h1>Posts You're Interested In</h1>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <h3><%= post.title %></h3>
+        <p><%= post.description %></p>
+        <p>Quantity: <%= post.quantity %></p>
+        <p>Contact: <%= post.contactInfo %></p>
+        <p>Posted by: <%= post.postedBy.username %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
