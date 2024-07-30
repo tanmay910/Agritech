@@ -284,7 +284,7 @@ li > a:only-child:after { content: ''; }
 		padding: 5px 0;
 	}
 	nav a:hover {
-		color: #333;
+		color: #000000;
 	}
 	.login-icon {
 		text-align: center;
@@ -372,21 +372,23 @@ li > a:only-child:after { content: ''; }
 }
 
 .banner-top {
-    background: url(../images/3.jpg) no-repeat center;
+    background: url(../images/new.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
+		opacity: 0.95;
 }
 
 .banner-top1 {
-    background: url(../images/1.jpg) no-repeat center;
+    background: url(../images/new.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
+		opacity: 0.95;
 }
 
 .banner-top2 {
