@@ -5,6 +5,7 @@ const app = express();
 
 // Proxy requests to Node.js server for /node paths
 app.use('/node', createProxyMiddleware({
+    // target: 'http://localhost:3000', // Node.js server URL
     target: 'https://agritech-node.onrender.com', // Node.js server URL
     changeOrigin: true,
     pathRewrite: {
@@ -20,6 +21,7 @@ app.use('/node', createProxyMiddleware({
 
 // Proxy all other requests to Flask server
 app.use('/', createProxyMiddleware({
+    // target: 'http://127.0.0.1:5000', // Flask server URL
     target: 'https://agritech-vtu5.onrender.com', // Flask server URL
     changeOrigin: true
 }));

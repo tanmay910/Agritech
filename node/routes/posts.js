@@ -4,7 +4,7 @@ const Post = require('../models/Post');
 const { ensureAuthenticated } = require('../config/auth');
 
 // Create Post (Trader)
-router.get('/create', ensureAuthenticated, (req, res) => res.render('createPost'));
+router.get('/create', ensureAuthenticated, (req, res) => res.render('createPost',{user: req.session.user}));
 
 router.post('/create', ensureAuthenticated, async (req, res) => {
   const { title, description, quantity, contactInfo } = req.body;
@@ -56,7 +56,7 @@ router.post('/interested/:id', ensureAuthenticated, async (req, res) => {
 router.get('/traderPosts', ensureAuthenticated, async (req, res) => {
   try {
     const posts = await Post.find({ postedBy: req.session.user._id }).populate('interestedFarmers', 'username');
-    res.render('traderPosts', { posts });
+    res.render('traderPosts', { posts , user: req.session.user });
   } catch (err) {
     console.error(err);
     res.redirect('/node/');
@@ -67,7 +67,7 @@ router.get('/traderPosts', ensureAuthenticated, async (req, res) => {
 router.get('/farmerInterests', ensureAuthenticated, async (req, res) => {
   try {
     const posts = await Post.find({ interestedFarmers: req.session.user._id }).populate('postedBy', 'username');
-    res.render('farmerInterests', { posts });
+    res.render('farmerInterests', { posts , user: req.session.user });
   } catch (err) {
     console.error(err);
     res.redirect('/node/');
