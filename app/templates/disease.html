@@ -2,91 +2,40 @@
 
 
 <style>
-  html, body {
-    background-color: rgb(255, 255, 255);
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  html body {
+    background-color: #ffffff;
   }
-
-  h2 {
-    text-align: center;
-    margin: 20px 0;
-    color: black;
-    font-size: 1.8rem;
-  }
-
-  body {
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .form-container {
-    width: 350px;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 20px;
-    margin: auto ;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-container h2 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .form-container input[type="file"] {
-    display: block;
-    margin: 20px auto;
-    font-weight: bold;
-    color: #555;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .form-container img {
-    display: none;
-    max-width: 100%;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .form-container button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .form-container button:hover {
-    background-color: #0056b3;
-  }
-
 </style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <b>Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
 
-<div class="form-container">
-  <h2>Crop Disease Predictor</h2>
-  <form class="form-signin" method="post" enctype="multipart/form-data">
-    <h2 class="h4 mb-3 font-weight-normal">Please Upload The Image</h2>
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
     <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
     <br>
     <br>
     <img id="output-image" class="rounded mx-auto d-block" />
     <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
+
+
   </form>
 </div>
 
@@ -96,10 +45,10 @@
     reader.onload = function () {
       var output = document.getElementById('output-image')
       output.src = reader.result;
-      output.style.display = 'block';
     }
     reader.readAsDataURL(event.target.files[0]);
   }
 </script>
 
+</div>
 {% endblock %}

@@ -255,11 +255,13 @@ def disease_prediction():
 
             prediction = Markup(str(disease_dic[prediction]))
             return render_template('disease-result.html', prediction=prediction, title=title)
+            print('hter')
         except:
+            print('error')
             pass
     return render_template('disease.html', title=title)
 
 
 # ===============================================================================================
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
